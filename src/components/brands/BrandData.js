@@ -4,9 +4,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-// import { reserveRocket } from '../../redux/rockets/rocketsAC';
 import { reserveBrand } from '../../redux/brands/brandsAC';
-// import Phones from '../phones/Phones';
 import '../../index.css';
 import btnDetails from '../icons/arrow-right-circled.png';
 
@@ -17,11 +15,7 @@ const BrandData = ({ brandData }) => {
     brandName,
     brandSlug,
     brandDeviceCount,
-    // reserved,
   } = brandData;
-
-  // const baseURL = 'https://api-mobilespecs.azharimm.site/v2/';
-  // const brandDetailURL = baseURL + brandSlug;
 
   return (
     <li id={brandId} className="brand-card">

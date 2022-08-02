@@ -29,7 +29,6 @@ body {
   padding: 0;
   color: $pink3;
   background-color: $gray;
-  // font-family: $font1, $font2;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -100,7 +99,15 @@ body {
   }
 }
 
-.brands-container {
+.banner {
+  padding: 0.6rem 1rem;
+  font-family: $font2;
+  font-weight: 700;
+  background-color: $pink0;
+}
+
+.brands-container,
+.phones-container {
   margin: 0;
   padding: 0;
   background-color: $pink-1b;
@@ -112,27 +119,12 @@ body {
     border: none;
   }
 
-  .banner {
-    padding: 0.6rem 1rem;
-    font-family: $font2;
-    font-weight: 700;
-    background-color: $pink0;
-    // font-size: 1rem;
-  }
-
   .brands-list {
     margin: 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     background-color: $pink0;
-    // gap: 0.4rem;
     width: 100%;
-    // flex-wrap: wrap;
-    // flex-direction: column;
-
-    li {
-      // background-color: $pink0;
-    }
 
     li:nth-child(even) {
       background-color: $pink-1b;
@@ -141,14 +133,10 @@ body {
     .brand-card {
       display: flex;
       flex-direction: column;
-      // background-color: $pink2;
       padding: 0.3rem;
 
       > * {
-        // margin: 0.1rem;
         padding: 0.4rem;
-        // background-color: $pink0;
-        // border: #000 solid;
       }
 
       .c1 {
@@ -193,6 +181,75 @@ body {
           font-family: $font1;
           font-size: 1.1rem;
           font-weight: 700;
+        }
+      }
+    }
+  }
+
+  .phones-list {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: $pink-1b;
+    width: 100%;
+
+    li:nth-child(even) {
+      background-color: $pink0;
+    }
+
+    .phone-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+      padding: 0.3rem;
+
+      > * {
+        padding: 0.4rem;
+      }
+
+      .c1 {
+        text-align: end;
+
+        .phone-name {
+          margin: 0;
+          line-height: 1.2rem;
+          text-transform: uppercase;
+          font-family: $font2;
+          font-size: 1.3rem;
+          font-weight: 900;
+        }
+      }
+
+      .c2 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .phone-image {
+          text-align: center;
+          font-family: $font2;
+          font-size: 0.6rem;
+          font-weight: 900;
+          color: $pink-3;
+        }
+      }
+
+      .c3 {
+        display: flex;
+        flex-direction: column;
+
+        button {
+          cursor: pointer;
+          align-self: flex-end;
+          border: none;
+          margin: 0;
+          padding: 0;
+          background-color: rgb($pink0, 0.1);
+
+          .details-icon {
+            width: 1.7rem;
+          }
         }
       }
     }

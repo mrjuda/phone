@@ -11,6 +11,7 @@ import btnSettings from '../icons/gear.png';
 
 const Brands = () => {
   const brands = useSelector((store) => store.brands);
+
   const dispatch = useDispatch();
   useEffect(() => {
     if (!brands.length) {
@@ -22,11 +23,11 @@ const Brands = () => {
       <div className="header">
         <div className="h-c1">
           <img src={btnGoBack} className="nav-icon" alt="logo" />
-          <h2 className="nav-text">2015</h2>
+          <h2 className="nav-text">2022</h2>
         </div>
         <div className="h-c2">
           <h1 className="header-title">
-            phone makers
+            devices by brand
           </h1>
         </div>
         <div className="h-c3">
@@ -34,9 +35,11 @@ const Brands = () => {
           <img src={btnSettings} className="nav-icon" alt="logo" />
         </div>
       </div>
-      <div className="banner">DEVICES BY BRAND</div>
+      <div className="banner">DEVICES BY MAKER</div>
       <ul className="brands-list">
-        {brands.map((brand) => <BrandData key={brand.brandSlug} brandData={brand} />)}
+        {brands.map((brand) => (
+          <BrandData key={brand.brandSlug} brandData={brand} />
+        ))}
       </ul>
     </div>
   );

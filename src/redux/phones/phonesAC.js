@@ -12,14 +12,13 @@ export const getPhones = createAsyncThunk(GET_PHONES, async (slug) => {
 
   phones.data.phones.forEach((phone) => {
     phoneData.push({
-      // phoneId: brand.brand_id,
+      brandName: phone.brand,
       phoneName: phone.phone_name,
       phoneSlug: phone.slug,
       phoneImage: phone.image,
       reserved: false,
     });
   });
-  // console.log(phoneData);
   return phoneData;
 });
 

@@ -6,7 +6,6 @@ import { GET_BRANDS, RESERVE_BRAND } from './brandsActions';
 const baseURL = 'https://api-mobilespecs.azharimm.site/v2/brands';
 
 export const getBrands = createAsyncThunk(GET_BRANDS, async () => {
-  // const res = await fetch('https://api.spacexdata.com/v3/rockets');
   const res = await fetch(baseURL);
   const brands = await res.json();
   const brandsData = [];
