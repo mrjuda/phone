@@ -15,7 +15,7 @@ const Rockets = () => {
     }
   }, [dispatch]);
   return (
-    <div className="rockets-container">
+    <div className="brands-container">
       <hr />
       <ul className="rockets-list">
         {rockets.map((rocket) => <RocketData key={rocket.id} rocketData={rocket} />)}

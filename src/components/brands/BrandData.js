@@ -5,6 +5,8 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 // import { reserveRocket } from '../../redux/rockets/rocketsAC';
 import { reserveBrand } from '../../redux/phones/brandsAC';
+import '../../index.css';
+import btnDetails from '../icons/arrow-right-circled.png';
 
 const BrandData = ({ brandData }) => {
   const dispatch = useDispatch();
@@ -20,25 +22,31 @@ const BrandData = ({ brandData }) => {
   // const brandDetail = baseURL + brandData.description;
 
   return (
-    <li id={brandId} className="rocket-card">
+    <li id={brandId} className="brand-card">
       <div className="c1">
-        <h2>{brandName}</h2>
-        {/* <img className="rocket-image" src={image} alt="rocket-pic" /> */}
-      </div>
-      <div className="c2">
-        <h2 className="rocket-name">{brandName}</h2>
-        <div className="rocket-res-desc">
-          <p className="rocket-description">
-            {brandDeviceCount}
-          </p>
-        </div>
         <button
           type="button"
           onClick={() => dispatch(reserveBrand(brandId))}
-          className="btn-reserve-rocket"
+          className="details-icon"
         >
-          Details
+          <img
+            src={btnDetails}
+            className="details-icon"
+            alt="icon"
+          />
         </button>
+        <div className="brand-logo">
+          <h1>
+            {brandName}
+            Logo
+          </h1>
+        </div>
+      </div>
+      <div className="c2">
+        <h2 className="brand-name">{brandName}</h2>
+        <div className="brand-device-count">
+          {brandDeviceCount}
+        </div>
       </div>
     </li>
   );

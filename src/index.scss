@@ -1,24 +1,34 @@
 // index.scss
 
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;700&family=Lato:wght@300;400;700;900&display=swap');
+$black: #221f22;
+$gray: #646464;
+$pink-3: #7e353b;
+$pink-2: #883757;
+$pink-1: #bd2b5a;
+$pink-1b: #ce4679;
+$pink0: #e04883;
+$pink1: #c98da0;
+$pink2: #f4a2c4;
+$pink3: #f1d9d9;
+$font2: 'Lato', 'Cabin';
+$font1: 'Gill Sans', 'Gill Sans MT', calibri, 'Trebuchet MS', sans-serif;
+
 * {
   list-style: none;
 }
 
+ul {
+  padding: 0;
+  margin: 0;
+}
+
 body {
-  margin: 0 0.5rem;
-  padding: 0 0.5rem;
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    'Roboto',
-    'Oxygen',
-    'Ubuntu',
-    'Cantarell',
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
+  margin: 0;
+  padding: 0;
+  color: $pink3;
+  background-color: $gray;
+  // font-family: $font1, $font2;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -29,6 +39,39 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 0.3rem;
+  font-family: $font1;
+
+  .nav-icon {
+    height: 1.2rem;
+    width: 1.2rem;
+    cursor: pointer;
+  }
+
+  .h-c1 {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+
+    .nav-text {
+      font-weight: 500;
+    }
+  }
+
+  .h-c2 {
+    display: flex;
+    gap: 0.3rem;
+
+    .header-title {
+      font-family: $font1;
+      font-size: 1.4rem;
+      font-weight: 400;
+    }
+  }
+
+  .h-c3 {
+    display: flex;
+    gap: 1rem;
+  }
 
   .logo-title {
     display: flex;
@@ -56,15 +99,102 @@ body {
   }
 }
 
-.rockets-container {
+.brands-container {
   margin: 0;
   padding: 0;
+  background-color: $pink-1b;
 
   hr {
     margin: 1rem 0;
     padding: 0.08rem 0;
     background-color: #ddd;
     border: none;
+  }
+
+  .banner {
+    padding: 0.6rem 1rem;
+    font-family: $font2;
+    font-weight: 700;
+    background-color: $pink0;
+    // font-size: 1rem;
+  }
+
+  .brands-list {
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: $pink0;
+    // gap: 0.4rem;
+    width: 100%;
+    // flex-wrap: wrap;
+    // flex-direction: column;
+
+    li {
+      // background-color: $pink0;
+    }
+
+    li:nth-child(even) {
+      background-color: $pink-1b;
+    }
+
+    .brand-card {
+      display: flex;
+      flex-direction: column;
+      // background-color: $pink2;
+      padding: 0.3rem;
+
+      > * {
+        // margin: 0.1rem;
+        padding: 0.4rem;
+        // background-color: $pink0;
+        // border: #000 solid;
+      }
+
+      .c1 {
+        display: flex;
+        flex-direction: column;
+
+        button {
+          cursor: pointer;
+          align-self: flex-end;
+          border: none;
+          margin: 0;
+          padding: 0;
+          background-color: rgb($pink0, 0.1);
+
+          .details-icon {
+            width: 1.7rem;
+          }
+        }
+
+        .brand-logo {
+          text-align: center;
+          font-family: $font2;
+          font-size: 0.6rem;
+          font-weight: 900;
+          color: $pink-3;
+        }
+      }
+
+      .c2 {
+        text-align: end;
+
+        .brand-name {
+          margin: 0;
+          line-height: 1.2rem;
+          text-transform: uppercase;
+          font-family: $font2;
+          font-size: 1.3rem;
+          font-weight: 900;
+        }
+
+        .brand-device-count {
+          font-family: $font1;
+          font-size: 1.1rem;
+          font-weight: 700;
+        }
+      }
+    }
   }
 
   .rockets-list {
@@ -141,160 +271,6 @@ body {
           border: none;
           color: #fff;
           background-color: #1f81dd;
-        }
-      }
-    }
-  }
-}
-
-// MISSIONS' STYLE //
-
-table,
-tbody,
-thead,
-tr,
-th,
-td {
-  border: 1px solid rgb(178, 178, 178);
-  border-collapse: collapse;
-}
-
-.missions-pre-container {
-  hr {
-    margin: 1rem 0;
-    padding: 0.08rem 0;
-    background-color: #ddd;
-    border: none;
-  }
-
-  .missions-container {
-    .missions-head {
-      tr > * {
-        padding: 0.8rem;
-        text-align: left;
-      }
-    }
-
-    .missions-list {
-      tr > * {
-        padding: 0.8rem;
-      }
-
-      tr:nth-child(odd) {
-        background-color: rgb(211, 211, 211);
-      }
-
-      .row {
-        .mission-name {
-          padding: 0.8rem;
-          display: flex;
-          font-size: 1.3rem;
-          font-weight: bold;
-          border: none;
-        }
-
-        .mission-description {
-          text-align: justify;
-        }
-
-        .mission-status {
-          text-align: center;
-
-          .member-joined {
-            white-space: nowrap;
-            color: #fff;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 0.8rem;
-            font-weight: bold;
-            background-color: #008f99;
-            padding: 0.1rem 0.3rem;
-            border: none 0.3rem #888;
-            border-radius: 0.3rem;
-          }
-
-          .member-not-joined {
-            white-space: nowrap;
-            color: #fff;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 0.8rem;
-            font-weight: bold;
-            padding: 0.1rem 0.3rem;
-            background-color: #555;
-            border: solid 0.1rem #888;
-            border-radius: 0.3rem;
-          }
-        }
-
-        .mission-actions {
-          text-align: center;
-
-          * {
-            white-space: nowrap;
-            padding: 0.3rem;
-            cursor: pointer;
-          }
-
-          .leave-mission {
-            color: red;
-            text-align: center;
-            background-color: #fff;
-            border: solid 0.1rem rgb(255, 0, 0);
-            border-radius: 0.3rem;
-          }
-
-          .join-mission {
-            color: #333;
-            text-align: center;
-            background-color: #fff;
-            border: solid 0.1rem #555;
-            border-radius: 0.3rem;
-          }
-        }
-      }
-    }
-  }
-}
-
-.pre-pf-container {
-  hr {
-    margin: 1rem 0;
-    padding: 0.08rem 0;
-    background-color: #ddd;
-    border: none;
-  }
-
-  .all-profiles-container {
-    padding: 0.2rem;
-    display: flex;
-    justify-content: space-between;
-
-    .cp1,
-    .cp2,
-    .cp3 {
-      width: 100%;
-      margin: 0.4rem;
-      padding: 0.4rem;
-    }
-
-    * > .pf-container {
-      width: 100%;
-
-      .pf-title {
-        margin: 0.2rem;
-        padding: 0.2rem 0;
-        font-size: 1.6rem;
-        font-weight: 400;
-      }
-
-      .pf-table {
-        width: 100%;
-
-        .pf-item-list {
-          .pf-item {
-            .pf-item-name {
-              padding: 0.9rem 0.6rem;
-            }
-          }
         }
       }
     }
