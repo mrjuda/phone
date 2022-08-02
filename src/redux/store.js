@@ -1,6 +1,6 @@
 import { configureStore, combineReducers } from '@reduxjs/toolkit';
 import rocketsSlice from './rockets/rocketsSlice';
-import brandsSlice from './phones/brandsSlice';
+import brandsSlice from './brands/brandsSlice';
 
 const reducer = combineReducers({
   brands: brandsSlice.reducer,

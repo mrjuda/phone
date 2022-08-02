@@ -16,7 +16,7 @@ export const getBrands = createAsyncThunk(GET_BRANDS, async () => {
       brandName: brand.brand_name,
       brandSlug: brand.brand_slug,
       brandDeviceCount: brand.device_count,
-      // reserved: false,
+      reserved: false,
     });
   });
   return brandsData;

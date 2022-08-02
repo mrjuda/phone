@@ -5,6 +5,7 @@ import {
 import Navbar from './components/NavBar';
 import Rockets from './components/rockets/Rockets';
 import Brands from './components/brands/Brands';
+import Phones from './components/phones/Phones';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Brands />} />
+          <Route path="/phones" element={<Phones />} />
           <Route path="/rockets" element={<Rockets />} />
         </Routes>
       </BrowserRouter>

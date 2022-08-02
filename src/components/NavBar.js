@@ -16,7 +16,13 @@ const Navbar = () => (
       <ul>
         <li>
           {' '}
-          <NavLink to="/">Phones</NavLink>
+          <NavLink to="/">Brands</NavLink>
+          {' '}
+        </li>
+        <span>|</span>
+        <li>
+          {' '}
+          <NavLink to="/phones">Phones</NavLink>
           {' '}
         </li>
         <span>|</span>

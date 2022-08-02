@@ -1,10 +1,12 @@
 // BrandData.js
 
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 // import { reserveRocket } from '../../redux/rockets/rocketsAC';
-import { reserveBrand } from '../../redux/phones/brandsAC';
+import { reserveBrand } from '../../redux/brands/brandsAC';
+import Phones from '../phones/Phones';
 import '../../index.css';
 import btnDetails from '../icons/arrow-right-circled.png';
 
@@ -13,28 +15,30 @@ const BrandData = ({ brandData }) => {
   const {
     brandId,
     brandName,
-    // brandSlug,
+    brandSlug,
     brandDeviceCount,
     // reserved,
   } = brandData;
 
-  // const baseURL = 'https://api-mobilespecs.azharimm.site/v2/brands/';
-  // const brandDetail = baseURL + brandData.description;
+  const baseURL = 'https://api-mobilespecs.azharimm.site/v2/';
+  const brandDetailURL = baseURL + brandSlug;
 
   return (
     <li id={brandId} className="brand-card">
       <div className="c1">
-        <button
-          type="button"
-          onClick={() => dispatch(reserveBrand(brandId))}
-          className="details-icon"
-        >
-          <img
-            src={btnDetails}
+        <NavLink to="/phones">
+          <button
+            type="button"
+            onClick={() => dispatch(reserveBrand(brandId))}
             className="details-icon"
-            alt="icon"
-          />
-        </button>
+          >
+            <img
+              src={btnDetails}
+              className="details-icon"
+              alt="icon"
+            />
+          </button>
+        </NavLink>
         <div className="brand-logo">
           <h1>
             {brandName}
