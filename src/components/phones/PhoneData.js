@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 // import { useDispatch } from 'react-redux';
 // import { reservePhone } from '../../redux/brands/brandsAC';
 import '../../index.css';
-import btnDetails from '../icons/arrow-right-circled.png';
+// import btnDetails from '../icons/arrow-right-circled.png';
 
 const PhoneData = ({ phoneData }) => {
   // const dispatch = useDispatch();
@@ -27,16 +27,18 @@ const PhoneData = ({ phoneData }) => {
           // onClick={() => dispatch(reservePhone(phoneId))}
           className="details-icon"
         >
-          <img
+          {/* <img
             src={btnDetails}
             className="details-icon"
             alt="icon"
-          />
+          /> */}
         </button>
         <div className="brand-logo">
-          <h1>
-            {phoneImage}
-          </h1>
+          <img
+            src={phoneImage}
+            className="details-icon"
+            alt="icon"
+          />
         </div>
       </div>
       <div className="c2">

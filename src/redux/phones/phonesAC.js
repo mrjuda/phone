@@ -3,22 +3,24 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { GET_PHONES, RESERVE_PHONE } from './phonesActions';
 
-const baseURL = 'https://api-mobilespecs.azharimm.site/v2/brands';
+const baseURL = 'https://api-mobilespecs.azharimm.site/v2/brands/';
 
-export const getPhones = createAsyncThunk(GET_PHONES, async () => {
-  const res = await fetch(baseURL);
+export const getPhones = createAsyncThunk(GET_PHONES, async (slug) => {
+  const res = await fetch(baseURL + slug);
   const phones = await res.json();
-  const phonesData = [];
+  const phoneData = [];
+
   phones.data.phones.forEach((phone) => {
-    phonesData.push({
+    phoneData.push({
       // phoneId: brand.brand_id,
       phoneName: phone.phone_name,
-      // phoneSlug: phone.slug,
+      phoneSlug: phone.slug,
       phoneImage: phone.image,
       reserved: false,
     });
   });
-  return phonesData;
+  // console.log(phoneData);
+  return phoneData;
 });
 
 export const reservePhone = (id) => ({

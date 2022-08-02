@@ -36,7 +36,7 @@ const Brands = () => {
       </div>
       <div className="banner">DEVICES BY BRAND</div>
       <ul className="brands-list">
-        {brands.map((brand) => <BrandData key={brand.id} brandData={brand} />)}
+        {brands.map((brand) => <BrandData key={brand.brandSlug} brandData={brand} />)}
       </ul>
     </div>
   );
