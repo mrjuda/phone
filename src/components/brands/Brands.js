@@ -1,6 +1,6 @@
 // Brands.js
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getBrands } from '../../redux/brands/brandsAC';
 import BrandData from './BrandData';
@@ -8,9 +8,23 @@ import '../../index.css';
 import btnGoBack from '../icons/arrow-left.png';
 import btnMic from '../icons/mic.png';
 import btnSettings from '../icons/gear.png';
+import btnSearch from '../icons/search.png';
+import btnDelete from '../icons/delete.png';
 
 const Brands = () => {
-  const brands = useSelector((store) => store.brands);
+  const brands = useSelector(
+    (store) => store.brands,
+  );
+
+  const [lookUpStr, setLookUpStr] = useState('');
+  let deviceCounter = 0;
+  if (brands.length > 0) {
+    const deviceCounterArr = [];
+    brands.forEach((phone) => {
+      deviceCounterArr.push(Number(phone.brandDeviceCount));
+    });
+    deviceCounter = deviceCounterArr.reduce((a, b) => a + b, 0);
+  }
 
   const dispatch = useDispatch();
   useEffect(() => {
@@ -18,6 +32,17 @@ const Brands = () => {
       dispatch(getBrands());
     }
   }, [dispatch]);
+
+  const searchedBrand = brands.filter((phone) => (
+    phone.brandName.toLowerCase().includes(lookUpStr.toLocaleLowerCase())
+  ));
+  let showSearchedBrand = [];
+  if (lookUpStr.trim().length > 0) {
+    showSearchedBrand = [...searchedBrand];
+  } else {
+    showSearchedBrand = [...brands];
+  }
+
   return (
     <div className="brands-container">
       <div className="header">
@@ -35,9 +60,33 @@ const Brands = () => {
           <img src={btnSettings} className="nav-icon" alt="logo" />
         </div>
       </div>
-      <div className="banner">DEVICES BY MAKER</div>
+      <div className="brands-banner">
+        <div className="bc-1">
+          <img src={btnSearch} className="nav-icon" alt="logo" />
+          <input
+            type="text"
+            className="search-bar"
+            value={lookUpStr}
+            placeholder="Search brands"
+            onChange={(e) => setLookUpStr(e.target.value)}
+          />
+          <button
+            type="button"
+            className="search-delete"
+            onClick={() => setLookUpStr('')}
+          >
+            <img src={btnDelete} className="nav-icon" alt="logo" />
+          </button>
+        </div>
+        <div className="bc-2">
+          {deviceCounter}
+          {' '}
+          devices available now
+        </div>
+      </div>
+      <div className="sub-banner">DEVICES BY MAKER</div>
       <ul className="brands-list">
-        {brands.map((brand) => (
+        {showSearchedBrand.map((brand) => (
           <BrandData key={brand.brandSlug} brandData={brand} />
         ))}
       </ul>

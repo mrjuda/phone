@@ -45,7 +45,7 @@ const Phones = () => {
           <img src={btnSettings} className="nav-icon" alt="logo" />
         </div>
       </div>
-      <div className="banner">DEVICES LIST</div>
+      <div className="sub-banner">DEVICES LIST</div>
       <ul className="phones-list">
         {phones.map((phone) => (
           <PhoneData key={phone.phoneSlug} phoneData={phone} />

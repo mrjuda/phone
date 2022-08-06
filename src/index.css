@@ -8,6 +8,11 @@ ul {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+  color: #f1d9d9;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -19,11 +24,14 @@ body {
 
 .header {
   display: flex;
-  padding: 0 1rem;
+  padding: 0.4rem 0.6rem;
   justify-content: space-between;
   align-items: center;
   gap: 0.3rem;
   font-family: "Gill Sans", "Gill Sans MT", calibri, "Trebuchet MS", sans-serif;
+}
+.header * {
+  gap: 0.2rem;
 }
 .header .nav-icon {
   height: 1.2rem;
@@ -33,23 +41,23 @@ body {
 .header .h-c1 {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
 }
 .header .h-c1 .nav-text {
+  margin: 0;
+  font-size: 1rem;
   font-weight: 500;
 }
 .header .h-c2 {
   display: flex;
-  gap: 0.3rem;
 }
 .header .h-c2 .header-title {
+  margin: 0;
   font-family: "Gill Sans", "Gill Sans MT", calibri, "Trebuchet MS", sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 400;
 }
 .header .h-c3 {
   display: flex;
-  gap: 1rem;
 }
 .header .logo-title {
   display: flex;
@@ -72,13 +80,6 @@ body {
   font-weight: bold;
 }
 
-.banner {
-  padding: 0.6rem 1rem;
-  font-family: "Lato", "Cabin";
-  font-weight: 700;
-  background-color: #e04883;
-}
-
 .brands-container,
 .phones-container {
   margin: 0;
@@ -91,6 +92,84 @@ body {
   padding: 0.08rem 0;
   background-color: #ddd;
   border: none;
+}
+.brands-container .brands-banner,
+.phones-container .brands-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 2rem 1rem;
+}
+.brands-container .brands-banner *,
+.phones-container .brands-banner * {
+  text-align: center;
+  align-items: center;
+  font-family: "Gill Sans", "Gill Sans MT", calibri, "Trebuchet MS", sans-serif;
+  gap: 0.2rem;
+}
+.brands-container .brands-banner .bc-1,
+.phones-container .brands-banner .bc-1 {
+  display: flex;
+  justify-content: center;
+}
+.brands-container .brands-banner .bc-1 .nav-icon,
+.phones-container .brands-banner .bc-1 .nav-icon {
+  height: 1.4rem;
+  width: 1.4rem;
+}
+.brands-container .brands-banner .bc-1 .search-bar,
+.phones-container .brands-banner .bc-1 .search-bar {
+  color: #bd2b5a;
+  border: none;
+  height: 2.4rem;
+  width: 50vw;
+  border-radius: 1.6rem;
+  padding: 0 1rem;
+  text-align: left;
+}
+.brands-container .brands-banner .bc-1 input:focus,
+.phones-container .brands-banner .bc-1 input:focus {
+  outline: none;
+  background-color: #f1d9d9;
+}
+.brands-container .brands-banner .bc-1 ::-moz-placeholder, .phones-container .brands-banner .bc-1 ::-moz-placeholder {
+  color: #bd2b5a;
+}
+.brands-container .brands-banner .bc-1 :-ms-input-placeholder, .phones-container .brands-banner .bc-1 :-ms-input-placeholder {
+  color: #bd2b5a;
+}
+.brands-container .brands-banner .bc-1 ::placeholder,
+.brands-container .brands-banner .bc-1 textarea,
+.phones-container .brands-banner .bc-1 ::placeholder,
+.phones-container .brands-banner .bc-1 textarea {
+  color: #bd2b5a;
+}
+.brands-container .brands-banner .bc-1 .search-delete,
+.phones-container .brands-banner .bc-1 .search-delete {
+  width: 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.brands-container .brands-banner .bc-1 .search-delete img,
+.phones-container .brands-banner .bc-1 .search-delete img {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+.brands-container .brands-banner .bc-2,
+.phones-container .brands-banner .bc-2 {
+  display: flex;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.brands-container .sub-banner,
+.phones-container .sub-banner {
+  padding: 0.6rem 1rem;
+  font-family: "Lato", "Cabin";
+  font-weight: 700;
+  background-color: #e04883;
 }
 .brands-container .brands-list,
 .phones-container .brands-list {
@@ -110,17 +189,17 @@ body {
   flex-direction: column;
   padding: 0.3rem;
 }
-.brands-container .brands-list .brand-card > *,
-.phones-container .brands-list .brand-card > * {
+.brands-container .brands-list .brand-card .nav-link-container > *,
+.phones-container .brands-list .brand-card .nav-link-container > * {
   padding: 0.4rem;
 }
-.brands-container .brands-list .brand-card .c1,
-.phones-container .brands-list .brand-card .c1 {
+.brands-container .brands-list .brand-card .nav-link-container .c1,
+.phones-container .brands-list .brand-card .nav-link-container .c1 {
   display: flex;
   flex-direction: column;
 }
-.brands-container .brands-list .brand-card .c1 button,
-.phones-container .brands-list .brand-card .c1 button {
+.brands-container .brands-list .brand-card .nav-link-container .c1 button,
+.phones-container .brands-list .brand-card .nav-link-container .c1 button {
   cursor: pointer;
   align-self: flex-end;
   border: none;
@@ -128,24 +207,24 @@ body {
   padding: 0;
   background-color: rgba(224, 72, 131, 0.1);
 }
-.brands-container .brands-list .brand-card .c1 button .details-icon,
-.phones-container .brands-list .brand-card .c1 button .details-icon {
+.brands-container .brands-list .brand-card .nav-link-container .c1 button .details-icon,
+.phones-container .brands-list .brand-card .nav-link-container .c1 button .details-icon {
   width: 1.7rem;
 }
-.brands-container .brands-list .brand-card .c1 .brand-logo,
-.phones-container .brands-list .brand-card .c1 .brand-logo {
+.brands-container .brands-list .brand-card .nav-link-container .c1 .brand-logo,
+.phones-container .brands-list .brand-card .nav-link-container .c1 .brand-logo {
   text-align: center;
   font-family: "Lato", "Cabin";
   font-size: 0.6rem;
   font-weight: 900;
   color: #7e353b;
 }
-.brands-container .brands-list .brand-card .c2,
-.phones-container .brands-list .brand-card .c2 {
+.brands-container .brands-list .brand-card .nav-link-container .c2,
+.phones-container .brands-list .brand-card .nav-link-container .c2 {
   text-align: end;
 }
-.brands-container .brands-list .brand-card .c2 .brand-name,
-.phones-container .brands-list .brand-card .c2 .brand-name {
+.brands-container .brands-list .brand-card .nav-link-container .c2 .brand-name,
+.phones-container .brands-list .brand-card .nav-link-container .c2 .brand-name {
   margin: 0;
   line-height: 1.2rem;
   text-transform: uppercase;
@@ -153,8 +232,8 @@ body {
   font-size: 1.3rem;
   font-weight: 900;
 }
-.brands-container .brands-list .brand-card .c2 .brand-device-count,
-.phones-container .brands-list .brand-card .c2 .brand-device-count {
+.brands-container .brands-list .brand-card .nav-link-container .c2 .brand-device-count,
+.phones-container .brands-list .brand-card .nav-link-container .c2 .brand-device-count {
   font-family: "Gill Sans", "Gill Sans MT", calibri, "Trebuchet MS", sans-serif;
   font-size: 1.1rem;
   font-weight: 700;
@@ -227,83 +306,4 @@ body {
 .brands-container .phones-list .phone-card .c3 button .details-icon,
 .phones-container .phones-list .phone-card .c3 button .details-icon {
   width: 1.7rem;
-}
-.brands-container .rockets-list,
-.phones-container .rockets-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin: 0;
-  padding: 0 1rem;
-}
-.brands-container .rockets-list .rocket-card,
-.phones-container .rockets-list .rocket-card {
-  display: flex;
-  gap: 1rem;
-}
-.brands-container .rockets-list .rocket-card .c1 .rocket-image,
-.phones-container .rockets-list .rocket-card .c1 .rocket-image {
-  width: 15rem;
-}
-.brands-container .rockets-list .rocket-card .c2,
-.phones-container .rockets-list .rocket-card .c2 {
-  display: flex;
-  flex-direction: column;
-}
-.brands-container .rockets-list .rocket-card .c2 .rocket-name,
-.phones-container .rockets-list .rocket-card .c2 .rocket-name {
-  font-size: 1.2rem;
-  font-weight: 500;
-  margin: 0;
-  text-align: left;
-  color: #000;
-}
-.brands-container .rockets-list .rocket-card .c2 .rocket-res-desc,
-.phones-container .rockets-list .rocket-card .c2 .rocket-res-desc {
-  display: flex;
-}
-.brands-container .rockets-list .rocket-card .c2 .rocket-res-desc .rocket-unavailable,
-.phones-container .rockets-list .rocket-card .c2 .rocket-res-desc .rocket-unavailable {
-  text-align: left;
-  color: #fff;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.7rem;
-  font-weight: bold;
-  border-radius: 0.3rem;
-  padding: 0.1rem 0.3rem;
-  margin-right: 0.4rem;
-  border: none;
-  background-color: #008f99;
-}
-.brands-container .rockets-list .rocket-card .c2 .rocket-res-desc .rocket-available,
-.phones-container .rockets-list .rocket-card .c2 .rocket-res-desc .rocket-available {
-  display: none;
-}
-.brands-container .rockets-list .rocket-card .c2 .rocket-res-desc .rocket-description,
-.phones-container .rockets-list .rocket-card .c2 .rocket-res-desc .rocket-description {
-  margin: 0.2rem 0;
-  text-align: justify;
-  font-size: 0.9rem;
-  line-height: 1.4rem;
-}
-.brands-container .rockets-list .rocket-card .c2 button,
-.phones-container .rockets-list .rocket-card .c2 button {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 0.6rem;
-  border-radius: 0.3rem;
-  cursor: pointer;
-}
-.brands-container .rockets-list .rocket-card .c2 .btn-cancel-reservation,
-.phones-container .rockets-list .rocket-card .c2 .btn-cancel-reservation {
-  color: #555;
-  background-color: #f7f7f7;
-  border: solid 0.1rem #888;
-}
-.brands-container .rockets-list .rocket-card .c2 .btn-reserve-rocket,
-.phones-container .rockets-list .rocket-card .c2 .btn-reserve-rocket {
-  border: none;
-  color: #fff;
-  background-color: #1f81dd;
 }/*# sourceMappingURL=index.css.map */

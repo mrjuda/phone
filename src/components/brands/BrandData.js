@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // BrandData.js
 
 import React from 'react';
@@ -19,11 +20,14 @@ const BrandData = ({ brandData }) => {
 
   return (
     <li id={brandId} className="brand-card">
-      <div className="c1">
-        <NavLink to={brandSlug}>
+      <NavLink
+        className="nav-link-container"
+        onClick={() => dispatch(reserveBrand(brandId))}
+        to={brandSlug}
+      >
+        <div className="c1">
           <button
             type="button"
-            onClick={() => dispatch(reserveBrand(brandId))}
             className="details-icon"
           >
             <img
@@ -32,20 +36,20 @@ const BrandData = ({ brandData }) => {
               alt="icon"
             />
           </button>
-        </NavLink>
-        <div className="brand-logo">
-          <h1>
-            {brandName}
-            Logo
-          </h1>
+          <div className="brand-logo">
+            <h1>
+              {brandName}
+              Logo
+            </h1>
+          </div>
         </div>
-      </div>
-      <div className="c2">
-        <h2 className="brand-name">{brandName}</h2>
-        <div className="brand-device-count">
-          {brandDeviceCount}
+        <div className="c2">
+          <h2 className="brand-name">{brandName}</h2>
+          <div className="brand-device-count">
+            {brandDeviceCount}
+          </div>
         </div>
-      </div>
+      </NavLink>
     </li>
   );
 };
