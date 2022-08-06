@@ -10,8 +10,11 @@ This is a React/Redux project for educational purposes only.
 - HTML5 + CSS3
 
 ## 📺 Live Demo
-Live version:
-- Netlify: [jl-phones.netlify.app](https://jl-phones.netlify.app/ "JL's Phone Brands' live version")
+Netlify:
+- [jl-phones.netlify.app](https://jl-phones.netlify.app/ "JL's Phone Brands' live version")
+
+Video presentation:
+- [Phone Brands video presentation](https://www.loom.com/share/e085bfdefec74a2f8ef06d5601cda60d)
 
 ## ⚙️ Installation
 
