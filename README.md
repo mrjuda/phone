@@ -5,13 +5,13 @@ Phone brands is an app that lists dozens of smartphones' makers and its latests 
 This is a React/Redux project for educational purposes only.
 
 ## 🛠 Built with
-- ReactJS / Redux
-- HTML5
-- CSS3
+- ReactJS + Redux
+- API
+- HTML5 + CSS3
 
 ## 📺 Live Demo
 Live version:
-
+- Netlify: [jl-phones.netlify.app](https://jl-phones.netlify.app/ "JL's Phone Brands' live version")
 
 ## ⚙️ Installation
 
