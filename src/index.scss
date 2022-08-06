@@ -1,0 +1,329 @@
+// index.scss
+
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;700&family=Lato:wght@300;400;700;900&display=swap');
+$black: #221f22;
+$gray: #646464;
+$pink-3: #7e353b;
+$pink-2: #883757;
+$pink-1: #bd2b5a;
+$pink-1b: #ce4679;
+$pink0: #e04883;
+$pink1: #c98da0;
+$pink2: #f4a2c4;
+$pink3: #f1d9d9;
+$pink4: #a323a3;
+$font2: 'Lato', 'Cabin';
+$font1: 'Gill Sans', 'Gill Sans MT', calibri, 'Trebuchet MS', sans-serif;
+
+* {
+  list-style: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: $pink3;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: $pink3;
+  background-color: $gray;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.header {
+  display: flex;
+  padding: 0.4rem 0.6rem;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: $font1;
+
+  * {
+    gap: 0.2rem;
+  }
+
+  .nav-icon {
+    height: 1.2rem;
+    width: 1.2rem;
+    cursor: pointer;
+  }
+
+  .h-c1 {
+    display: flex;
+    align-items: center;
+
+    .nav-text {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+  }
+
+  .h-c2 {
+    display: flex;
+
+    .header-title {
+      margin: 0;
+      font-family: $font1;
+      font-size: 1.2rem;
+      font-weight: 400;
+    }
+  }
+
+  .h-c3 {
+    display: flex;
+  }
+
+  .logo-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .logo {
+      height: 3rem;
+    }
+  }
+}
+
+/* ### BRANDS LIST ### */
+
+.brands-container {
+  margin: 0;
+  padding: 0;
+  background-color: $pink-1b;
+
+  .brands-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    padding: 2rem 1rem;
+
+    * {
+      text-align: center;
+      align-items: center;
+      font-family: $font1;
+      gap: 0.2rem;
+    }
+
+    .test-blend {
+      display: none;
+
+      img {
+        width: 60%;
+        mix-blend-mode: multiply;
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+      }
+
+      .test-blend-text {
+        color: $pink1;
+        position: absolute;
+        mix-blend-mode: hard-light;
+        left: 10%;
+        top: 30%;
+        width: 80%;
+        font-size: 3.4rem;
+        font-weight: 700;
+        letter-spacing: -0.5rem;
+      }
+    }
+
+    .bb-1 {
+      display: flex;
+      justify-content: center;
+
+      .nav-icon {
+        height: 1.4rem;
+        width: 1.4rem;
+      }
+
+      .search-bar {
+        color: $pink-1;
+        border: none;
+        height: 2.4rem;
+        width: 50vw;
+        border-radius: 1.6rem;
+        padding: 0 1rem;
+        text-align: left;
+      }
+
+      input:focus {
+        outline: none;
+        background-color: $pink3;
+      }
+
+      ::placeholder {
+        color: $pink-1;
+      }
+
+      textarea {
+        color: $pink-1;
+      }
+
+      .search-delete {
+        width: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+
+        img {
+          width: 1.4rem;
+          height: 1.4rem;
+        }
+      }
+    }
+
+    .bb-2 {
+      display: flex;
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+  }
+
+  .sub-banner {
+    padding: 0.6rem 1rem;
+    font-family: $font2;
+    font-weight: 700;
+    background-color: $pink0;
+  }
+
+  .brands-list {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: $pink0;
+    width: 100%;
+
+    .brand-card {
+      display: flex;
+      flex-direction: column;
+      padding: 0.3rem;
+
+      .nav-link-container {
+        > * {
+          padding: 0.4rem;
+        }
+
+        .c1 {
+          display: flex;
+          flex-direction: column;
+
+          button {
+            cursor: pointer;
+            align-self: flex-end;
+            border: none;
+            margin: 0;
+            padding: 0;
+            background-color: rgb($pink0, 0.1);
+
+            .details-icon {
+              width: 1.7rem;
+            }
+          }
+
+          .brand-logo {
+            text-align: center;
+            font-family: $font2;
+            font-size: 0.6rem;
+            font-weight: 900;
+            color: $pink-3;
+          }
+        }
+
+        .c2 {
+          text-align: end;
+
+          .brand-name {
+            margin: 0;
+            line-height: 1.2rem;
+            text-transform: uppercase;
+            font-family: $font2;
+            font-size: 1.3rem;
+            font-weight: 900;
+          }
+
+          .brand-device-count {
+            font-family: $font1;
+            font-size: 1.1rem;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+
+    // bg color for 2-col design
+    .brand-card:nth-child(4n - 2) {
+      background-color: $pink-1b;
+    }
+
+    .brand-card:nth-child(4n - 1) {
+      background-color: $pink-1b;
+    }
+  }
+}
+
+@media screen and (min-width: 550px) {
+  .brands-container {
+    .brands-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      background-color: $pink0;
+
+      // Undo 4n-2 + 4n-1 bg color
+      // (used in 2-col design)
+      .brand-card:nth-child(4n - 2) {
+        background-color: $pink0;
+      }
+
+      .brand-card:nth-child(4n - 1) {
+        background-color: $pink0;
+      }
+
+      // bg color applied to 3-col design
+      .brand-card:nth-child(even) {
+        background-color: $pink-1b;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .brands-container {
+    .brands-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+
+      // Undo even bg (used in 3 columns design)
+      .brand-card:nth-child(even) {
+        background-color: $pink0;
+      }
+
+      // bg color for 4-col design
+      .brand-card:nth-child(8n - 6) {
+        background-color: $pink-1b;
+      }
+
+      .brand-card:nth-child(8n - 4) {
+        background-color: $pink-1b;
+      }
+
+      .brand-card:nth-child(8n - 3) {
+        background-color: $pink-1b;
+      }
+
+      .brand-card:nth-child(8n - 1) {
+        background-color: $pink-1b;
+      }
+    }
+  }
+}

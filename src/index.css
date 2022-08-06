@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;700&family=Lato:wght@300;400;700;900&display=swap");
+* {
+  list-style: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #f1d9d9;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #f1d9d9;
+  background-color: #646464;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.header {
+  display: flex;
+  padding: 0.4rem 0.6rem;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: "Gill Sans", "Gill Sans MT", calibri, "Trebuchet MS", sans-serif;
+}
+.header * {
+  gap: 0.2rem;
+}
+.header .nav-icon {
+  height: 1.2rem;
+  width: 1.2rem;
+  cursor: pointer;
+}
+.header .h-c1 {
+  display: flex;
+  align-items: center;
+}
+.header .h-c1 .nav-text {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.header .h-c2 {
+  display: flex;
+}
+.header .h-c2 .header-title {
+  margin: 0;
+  font-family: "Gill Sans", "Gill Sans MT", calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.header .h-c3 {
+  display: flex;
+}
+.header .logo-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.header .logo-title .logo {
+  height: 3rem;
+}
+
+/* ### BRANDS LIST ### */
+.brands-container {
+  margin: 0;
+  padding: 0;
+  background-color: #ce4679;
+}
+.brands-container .brands-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 2rem 1rem;
+}
+.brands-container .brands-banner * {
+  text-align: center;
+  align-items: center;
+  font-family: "Gill Sans", "Gill Sans MT", calibri, "Trebuchet MS", sans-serif;
+  gap: 0.2rem;
+}
+.brands-container .brands-banner .test-blend {
+  display: none;
+}
+.brands-container .brands-banner .test-blend img {
+  width: 60%;
+  mix-blend-mode: multiply;
+  filter: grayscale(100%);
+}
+.brands-container .brands-banner .test-blend .test-blend-text {
+  color: #c98da0;
+  position: absolute;
+  mix-blend-mode: hard-light;
+  left: 10%;
+  top: 30%;
+  width: 80%;
+  font-size: 3.4rem;
+  font-weight: 700;
+  letter-spacing: -0.5rem;
+}
+.brands-container .brands-banner .bb-1 {
+  display: flex;
+  justify-content: center;
+}
+.brands-container .brands-banner .bb-1 .nav-icon {
+  height: 1.4rem;
+  width: 1.4rem;
+}
+.brands-container .brands-banner .bb-1 .search-bar {
+  color: #bd2b5a;
+  border: none;
+  height: 2.4rem;
+  width: 50vw;
+  border-radius: 1.6rem;
+  padding: 0 1rem;
+  text-align: left;
+}
+.brands-container .brands-banner .bb-1 input:focus {
+  outline: none;
+  background-color: #f1d9d9;
+}
+.brands-container .brands-banner .bb-1 ::-moz-placeholder {
+  color: #bd2b5a;
+}
+.brands-container .brands-banner .bb-1 :-ms-input-placeholder {
+  color: #bd2b5a;
+}
+.brands-container .brands-banner .bb-1 ::placeholder {
+  color: #bd2b5a;
+}
+.brands-container .brands-banner .bb-1 textarea {
+  color: #bd2b5a;
+}
+.brands-container .brands-banner .bb-1 .search-delete {
+  width: 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.brands-container .brands-banner .bb-1 .search-delete img {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+.brands-container .brands-banner .bb-2 {
+  display: flex;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.brands-container .sub-banner {
+  padding: 0.6rem 1rem;
+  font-family: "Lato", "Cabin";
+  font-weight: 700;
+  background-color: #e04883;
+}
+.brands-container .brands-list {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #e04883;
+  width: 100%;
+}
+.brands-container .brands-list .brand-card {
+  display: flex;
+  flex-direction: column;
+  padding: 0.3rem;
+}
+.brands-container .brands-list .brand-card .nav-link-container > * {
+  padding: 0.4rem;
+}
+.brands-container .brands-list .brand-card .nav-link-container .c1 {
+  display: flex;
+  flex-direction: column;
+}
+.brands-container .brands-list .brand-card .nav-link-container .c1 button {
+  cursor: pointer;
+  align-self: flex-end;
+  border: none;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(224, 72, 131, 0.1);
+}
+.brands-container .brands-list .brand-card .nav-link-container .c1 button .details-icon {
+  width: 1.7rem;
+}
+.brands-container .brands-list .brand-card .nav-link-container .c1 .brand-logo {
+  text-align: center;
+  font-family: "Lato", "Cabin";
+  font-size: 0.6rem;
+  font-weight: 900;
+  color: #7e353b;
+}
+.brands-container .brands-list .brand-card .nav-link-container .c2 {
+  text-align: end;
+}
+.brands-container .brands-list .brand-card .nav-link-container .c2 .brand-name {
+  margin: 0;
+  line-height: 1.2rem;
+  text-transform: uppercase;
+  font-family: "Lato", "Cabin";
+  font-size: 1.3rem;
+  font-weight: 900;
+}
+.brands-container .brands-list .brand-card .nav-link-container .c2 .brand-device-count {
+  font-family: "Gill Sans", "Gill Sans MT", calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.brands-container .brands-list .brand-card:nth-child(4n-2) {
+  background-color: #ce4679;
+}
+.brands-container .brands-list .brand-card:nth-child(4n-1) {
+  background-color: #ce4679;
+}
+
+@media screen and (min-width: 550px) {
+  .brands-container .brands-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #e04883;
+  }
+  .brands-container .brands-list .brand-card:nth-child(4n-2) {
+    background-color: #e04883;
+  }
+  .brands-container .brands-list .brand-card:nth-child(4n-1) {
+    background-color: #e04883;
+  }
+  .brands-container .brands-list .brand-card:nth-child(even) {
+    background-color: #ce4679;
+  }
+}
+@media screen and (min-width: 990px) {
+  .brands-container .brands-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .brands-container .brands-list .brand-card:nth-child(even) {
+    background-color: #e04883;
+  }
+  .brands-container .brands-list .brand-card:nth-child(8n-6) {
+    background-color: #ce4679;
+  }
+  .brands-container .brands-list .brand-card:nth-child(8n-4) {
+    background-color: #ce4679;
+  }
+  .brands-container .brands-list .brand-card:nth-child(8n-3) {
+    background-color: #ce4679;
+  }
+  .brands-container .brands-list .brand-card:nth-child(8n-1) {
+    background-color: #ce4679;
+  }
+}/*# sourceMappingURL=index.css.map */

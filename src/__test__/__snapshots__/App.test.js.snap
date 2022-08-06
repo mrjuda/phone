@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` Test App Rendering  App.js file renders correctly 1`] = `
+<div
+  className="App"
+>
+  <div
+    className="brands-container"
+  >
+    <div
+      className="header"
+    >
+      <div
+        className="h-c1"
+      >
+        <img
+          alt="logo"
+          className="nav-icon"
+          src="arrow-left.png"
+        />
+        <h2
+          className="nav-text"
+        >
+          2022
+        </h2>
+      </div>
+      <div
+        className="h-c2"
+      >
+        <h1
+          className="header-title"
+        >
+          devices by brand
+        </h1>
+      </div>
+      <div
+        className="h-c3"
+      >
+        <img
+          alt="logo"
+          className="nav-icon"
+          src="mic.png"
+        />
+        <img
+          alt="logo"
+          className="nav-icon"
+          src="gear.png"
+        />
+      </div>
+    </div>
+    <div
+      className="banner"
+    >
+      DEVICES BY MAKER
+    </div>
+    <ul
+      className="brands-list"
+    />
+  </div>
+</div>
+`;

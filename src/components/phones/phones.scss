@@ -1,0 +1,139 @@
+// phones.scss
+
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;700&family=Lato:wght@300;400;700;900&display=swap');
+$black: #221f22;
+$gray: #646464;
+$pink-3: #7e353b;
+$pink-2: #883757;
+$pink-1: #bd2b5a;
+$pink-1b: #ce4679;
+$pink0: #e04883;
+$pink1: #c98da0;
+$pink2: #f4a2c4;
+$pink3: #f1d9d9;
+$pink4: #a323a3;
+$font2: 'Lato', 'Cabin';
+$font1: 'Gill Sans', 'Gill Sans MT', calibri, 'Trebuchet MS', sans-serif;
+
+.phones-container {
+  margin: 0;
+  padding: 0;
+  background-color: $pink-1b;
+
+  .sub-banner {
+    padding: 0.6rem 1rem;
+    font-family: $font2;
+    font-weight: 700;
+    background-color: $pink0;
+  }
+
+  .phones-list {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: $pink-1b;
+    width: 100%;
+
+    li:nth-child(even) {
+      background-color: $pink0;
+    }
+
+    .phone-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+      padding: 0.3rem;
+
+      > * {
+        padding: 0.4rem;
+      }
+
+      .c1 {
+        text-align: center;
+        width: 100%;
+
+        .phone-name {
+          margin: 0;
+          line-height: 1.2rem;
+          text-transform: capitalize;
+          font-family: $font2;
+          font-size: 1rem;
+          font-weight: 900;
+        }
+      }
+
+      .c2 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .phone-image {
+          text-align: center;
+          font-family: $font2;
+          font-size: 0.6rem;
+          font-weight: 900;
+          color: $pink-3;
+          background-color: #fff;
+          border-radius: 1.2rem;
+          width: 13rem;
+          opacity: 0.9;
+
+          img {
+            mix-blend-mode: multiply;
+          }
+        }
+      }
+
+      .c3 {
+        display: flex;
+        flex-direction: column;
+
+        button {
+          cursor: pointer;
+          align-self: flex-end;
+          border: none;
+          margin: 0;
+          padding: 0;
+          background-color: rgb($pink0, 0.1);
+
+          .details-icon {
+            width: 1.7rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 550px) {
+  .phones-container {
+    .phones-list {
+      .phone-card {
+        display: flex;
+        flex-direction: row;
+
+        .c1 {
+          text-align: left;
+          width: 60%;
+        }
+
+        .c2 {
+          align-items: flex-end;
+
+          .phone-image {
+            img {
+              mix-blend-mode: multiply;
+            }
+          }
+        }
+
+        .c3 {
+          align-self: center;
+        }
+      }
+    }
+  }
+}
