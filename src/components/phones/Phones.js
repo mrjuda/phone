@@ -6,6 +6,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getPhones } from '../../redux/phones/phonesAC';
 import PhoneData from './PhoneData';
 import '../../index.css';
+import './phones.css';
 import btnGoBack from '../icons/arrow-left.png';
 import btnMic from '../icons/mic.png';
 import btnSettings from '../icons/gear.png';

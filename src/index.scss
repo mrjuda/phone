@@ -93,6 +93,8 @@ body {
   }
 }
 
+/* ### BRANDS LIST ### */
+
 .brands-container {
   margin: 0;
   padding: 0;
@@ -111,6 +113,29 @@ body {
       align-items: center;
       font-family: $font1;
       gap: 0.2rem;
+    }
+
+    .test-blend {
+      display: none;
+
+      img {
+        width: 60%;
+        mix-blend-mode: multiply;
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+      }
+
+      .test-blend-text {
+        color: $pink1;
+        position: absolute;
+        mix-blend-mode: hard-light;
+        left: 10%;
+        top: 30%;
+        width: 80%;
+        font-size: 3.4rem;
+        font-weight: 700;
+        letter-spacing: -0.5rem;
+      }
     }
 
     .bb-1 {
@@ -163,29 +188,6 @@ body {
       font-size: 1.1rem;
       font-weight: 700;
     }
-
-    .test-blend {
-      display: none;
-
-      img {
-        width: 60%;
-        mix-blend-mode: multiply;
-        -webkit-filter: grayscale(100%);
-        filter: grayscale(100%);
-      }
-
-      .test-blend-text {
-        color: $pink1;
-        position: absolute;
-        mix-blend-mode: hard-light;
-        left: 10%;
-        top: 30%;
-        width: 80%;
-        font-size: 3.4rem;
-        font-weight: 700;
-        letter-spacing: -0.5rem;
-      }
-    }
   }
 
   .sub-banner {
@@ -202,15 +204,6 @@ body {
     background-color: $pink0;
     width: 100%;
 
-    // bg color for 2-col design
-    .brand-card:nth-child(4n - 2) {
-      background-color: $pink-1b;
-    }
-
-    .brand-card:nth-child(4n - 1) {
-      background-color: $pink-1b;
-    }
-
     .brand-card {
       display: flex;
       flex-direction: column;
@@ -224,7 +217,7 @@ body {
         .c1 {
           display: flex;
           flex-direction: column;
-  
+
           button {
             cursor: pointer;
             align-self: flex-end;
@@ -232,12 +225,12 @@ body {
             margin: 0;
             padding: 0;
             background-color: rgb($pink0, 0.1);
-  
+
             .details-icon {
               width: 1.7rem;
             }
           }
-  
+
           .brand-logo {
             text-align: center;
             font-family: $font2;
@@ -246,10 +239,10 @@ body {
             color: $pink-3;
           }
         }
-  
+
         .c2 {
           text-align: end;
-  
+
           .brand-name {
             margin: 0;
             line-height: 1.2rem;
@@ -258,7 +251,7 @@ body {
             font-size: 1.3rem;
             font-weight: 900;
           }
-  
+
           .brand-device-count {
             font-family: $font1;
             font-size: 1.1rem;
@@ -267,98 +260,14 @@ body {
         }
       }
     }
-  }
-}
 
-.phones-container {
-  margin: 0;
-  padding: 0;
-  background-color: $pink-1b;
-
-  .sub-banner {
-    padding: 0.6rem 1rem;
-    font-family: $font2;
-    font-weight: 700;
-    background-color: $pink0;
-  }
-
-  .phones-list {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    background-color: $pink-1b;
-    width: 100%;
-
-    li:nth-child(even) {
-      background-color: $pink0;
+    // bg color for 2-col design
+    .brand-card:nth-child(4n - 2) {
+      background-color: $pink-1b;
     }
 
-    .phone-card {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-      height: 100%;
-      padding: 0.3rem;
-
-      > * {
-        padding: 0.4rem;
-      }
-
-      .c1 {
-        text-align: center;
-        width: 100%;
-
-        .phone-name {
-          margin: 0;
-          line-height: 1.2rem;
-          text-transform: capitalize;
-          font-family: $font2;
-          font-size: 1rem;
-          font-weight: 900;
-        }
-      }
-
-      .c2 {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        .phone-image {
-          text-align: center;
-          font-family: $font2;
-          font-size: 0.6rem;
-          font-weight: 900;
-          color: $pink-3;
-          background-color: #fff;
-          border-radius: 1.2rem;
-          width: 13rem;
-          opacity: 0.9;
-
-          img {
-            mix-blend-mode: multiply;
-          }
-        }
-      }
-
-      .c3 {
-        display: flex;
-        flex-direction: column;
-
-        button {
-          cursor: pointer;
-          align-self: flex-end;
-          border: none;
-          margin: 0;
-          padding: 0;
-          background-color: rgb($pink0, 0.1);
-
-          .details-icon {
-            width: 1.7rem;
-          }
-        }
-      }
+    .brand-card:nth-child(4n - 1) {
+      background-color: $pink-1b;
     }
   }
 }
@@ -386,34 +295,6 @@ body {
       }
     }
   }
-
-  .phones-container{
-    .phones-list {
-      .phone-card {
-        display: flex;
-        flex-direction: row;
-
-        .c1 {
-          text-align: left;
-          width: 60%;
-        }
-
-        .c2 {
-          align-items: flex-end;
-
-          .phone-image {
-            img {
-              mix-blend-mode: multiply;
-            }
-          }
-        }
-
-        .c3 {
-          align-self: center;
-        }
-      }
-    }
-  }
 }
 
 @media screen and (min-width: 990px) {
@@ -435,7 +316,7 @@ body {
       .brand-card:nth-child(8n - 4) {
         background-color: $pink-1b;
       }
-  
+
       .brand-card:nth-child(8n - 3) {
         background-color: $pink-1b;
       }
