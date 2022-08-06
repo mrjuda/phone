@@ -10,6 +10,7 @@ import btnMic from '../icons/mic.png';
 import btnSettings from '../icons/gear.png';
 import btnSearch from '../icons/search.png';
 import btnDelete from '../icons/delete.png';
+import testBlend from '../icons/test-blend.jpg';
 
 const Brands = () => {
   const brands = useSelector(
@@ -61,7 +62,7 @@ const Brands = () => {
         </div>
       </div>
       <div className="brands-banner">
-        <div className="bc-1">
+        <div className="bb-1">
           <img src={btnSearch} className="nav-icon" alt="logo" />
           <input
             type="text"
@@ -78,10 +79,20 @@ const Brands = () => {
             <img src={btnDelete} className="nav-icon" alt="logo" />
           </button>
         </div>
-        <div className="bc-2">
+        <div className="bb-2">
           {deviceCounter}
           {' '}
           devices available now
+        </div>
+        <div className="test-blend">
+          <img
+            src={testBlend}
+            className="test-blend-pic"
+            alt="logo"
+          />
+          <h1 className="test-blend-text">
+            JudaLabs
+          </h1>
         </div>
       </div>
       <div className="sub-banner">DEVICES BY MAKER</div>

@@ -39,7 +39,6 @@ const BrandData = ({ brandData }) => {
           <div className="brand-logo">
             <h1>
               {brandName}
-              Logo
             </h1>
           </div>
         </div>
